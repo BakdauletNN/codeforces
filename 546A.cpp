@@ -9,6 +9,11 @@ int main(){
     for (int i = 1; i <= w; i ++){
         res += k * i;
     }
-    cout <<res;
+    if (res > n){
+        cout << res - n;
+    }
+    else{
+        cout << 0;
+    }
     return 0;
 }
