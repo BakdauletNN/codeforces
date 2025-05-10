@@ -1,13 +1,18 @@
-mes = 'sevenkplus'
-let = dict()
-count = 0
-res = []
-for i in mes:
-    if i not in let:
-        let[i] = count
-print(let)
-
-for i in let.keys():
-    if let[i] == 0:
-        res.append(i)
-print('CHAT WITH HER!' if len(res) % 2 == 0 else 'IGNORE HIM!')
+#include <iostream>
+#include <set>
+#include <string>
+ 
+int main() {
+    std::string mes;
+    std::cin >> mes;
+ 
+    std::set<char> unique_chars(mes.begin(), mes.end());
+ 
+    if (unique_chars.size() % 2 == 0) {
+        std::cout << "CHAT WITH HER!" << std::endl;
+    } else {
+        std::cout << "IGNORE HIM!" << std::endl;
+    }
+ 
+    return 0;
+}
